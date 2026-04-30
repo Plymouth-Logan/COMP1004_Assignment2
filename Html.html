@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <main>
+            <div class = "popup-content" id = "popup-wrapper">
+                <div class = "activity-creation-wrapper">
+                    <div class = "activity-creation">
+                        <button id = "close-popup" class = "close-button">X</button>
+                        <label for = "activity">Name:</label>
+                        <input type = "text" id = "activity-input" name = "activity" required>
+                        <br>
+                        <label for = "calendar">Start of Activity:</label>
+                        <input type = "datetime-local" id = "calendar" name = "calendar" required> <!-- Will be used when making an activity-->
+                        <br>
+                        <label for = "duration">End of Activity:</label>
+                        <input type = "datetime-local" id = "duration" name = "duration" required>
+                        <br>
+                        <button class = "activity-create-button" id = "btnCreate">Create Activity</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "popup-content" id = "register-wrapper">
+                <div class = "activity-creation-wrapper">
+                    <div class = "activity-creation">
+                        <form action = "/register">
+                            <button id = "close-register" class = "close-button">X</button>
+                            <label>Email ID</label>
+                            <input type ="text" id = "username" name = "username" placeholder="Username" required>
+                            <br><br>
+                            <label>Password</label>
+                            <input type="password" id = "password" name="password" required minlength = "14">
+                            <br><br>
+                            <button type ="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class = "popup-content" id = "login-wrapper">
+                <div class = "activity-creation-wrapper">
+                    <div class = "activity-creation">
+                        <form action = "/login">
+                            <button id = "close-login" class = "close-button">X</button>
+                            <label>Email ID</label>
+                            <input type ="text" id = "username" name = "username" placeholder="Username" required>
+                            <br><br>
+                            <label>Password</label>
+                            <input type="password" id = "password" name="password" required minlength = "14">
+                            <br><br>
+                            <button type ="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class = "activity-content">
+                <div class = "show">
+                    <!-- Div for current activity interface -->
+                    <!--<button id = "open-register">Register</button>
+                    <button id = "open-login">Login</button> -->
+                    <button id = "open-popup" class = "popup-button">+</button>
+                    <div class = "current-activity-display" id = "current-activity-display">
+                        <h2 id = "current-activity-title" class = "activity-text">N/A</h2> <!-- Where the acitivty title will be displayed -->
+                        <div class = "activity-display" id = "activity-display">
+                            <div class = "activity-display-after">
+                                <p class = "activity-display-time" id = "time-left-display">N/A</p>
+                            </div>
+                            <!-- The display for current activity, as well as a progress bar for the activity -->
+                        </div>
+                    </div>  
+                    <div class = "sidebar" id = "activity-sidebar">
+                        <div class = "sidebar-activity" id = "default-activity-message">
+                            No current activities
+                        </div>
+                        <!--Inject Activites Here-->
+                    </div>
+                    <div class = "activity-calendar"> <!-- Upcoming Display-->
+                        <div class = "time-buttons">
+                            <button class = "calendar-button" onclick = "ChangeTag('This-Day')" id = "day-change">Today</button>
+                            <button class = "calendar-button" onclick = "ChangeTag('This-Week')" id = "week-change">This Week</button>
+                            <button class = "calendar-button" onclick = "ChangeTag('This-Month')" id = "month-change">This Month</button>
+                        </div>
+                        <div class = "activity-calendar-display" id = "calendar-display">
+                            <p class = "upcoming-activity" id = "default-upcoming-message">No upcoming activities</p>
+                            <!-- Inject Activities Here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Placeholder</p>
+        </footer>
+        <script src="Java.js"></script>
+    </body>
+</html>
