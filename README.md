@@ -23,4 +23,4 @@ activityLogger handles the currently selected activity, as well as the number of
 
 upcomingLogger holds the tag for upcoming activities to be displayed for (this day, this week, this month). It is important for the upcoming button's funcitonality, allwoing activities to be shown/hidden based on the clicked button.
 
-
+Comments include many loggers for functions. Functionality for a Node JS server is also commented out, mainly due to lack of time remaining to finish it.
